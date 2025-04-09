@@ -5,26 +5,25 @@ jhiojoza improvements of https://github.com/fetch-rewards/sre-take-home-exercise
 How to install the code
 =======================
 
-- Make sure you have the requests and yaml libraries
-    - `$ pip install pyyaml`
-    - `$ pip install requests`
-
-- Clone the repo
-    - `$ git clone <url>`
+- This code requieres Python 2.7+ or 3.4+
+- Make sure you have the :code:`requests` and :code:`yaml` libraries
+    - :code:`$ pip install pyyaml`
+    - :code:`$ pip install requests`
+- Download the code by either download the zip file or  :code:`$ git clone <repo> <directory>` command
 
 How to run the code
 ===================
 
 - Run in the terminal the following code
+    - ::
 
-::
-
-    $ python <python_file_path> <yaml_file_path>
+        $ cd <directory>
+        $ python ./main.py ./endpoints.yaml
 
 - The code will print in the terminal something similar to:
     - ::
 
-        $ python c:/Users/jhino/Documents/sre-interview/main.py C:\Users\jhino\Documents\sre-interview\endpoints.yaml
+        $ python ./main.py C:\Users\jhino\Documents\sre-interview\endpoints.yaml
         Starting the monitoring at Tue Apr  8 17:42:00 2025
     
         Iteration: 1
@@ -55,7 +54,7 @@ How to run the code
     
         ---
 
-- The program will also write csv-log-report with the name format as `logs_YYYY-MM-DD_HH-MM-SS.csv`
+- The program will also write csv-log-report with the name format as :code:`logs_YYYY-MM-DD_HH-MM-SS.csv`
     - ::
 
         item,time,facebook.com,fetchrewards.com,google.com,nopage.com,typicode.com
@@ -65,11 +64,11 @@ How to run the code
 Problems identified
 ===================
 
-- `check_health()` returns a `str`
+- :code:`check_health()` returns a :code:`str`
     - This is consider a bad practice, since the code might change in the future.
     - I fixed it declaring an Enum class at the beginning of the code.
 
-- Importing `sys` inside the `__main__` function
+- Importing :code:`sys` inside the :code:`__main__` function
     - Moved the import to the top part of the file.
 
 - Extracting method, headers and body from the dict without defining the default value
@@ -78,7 +77,7 @@ Problems identified
 - The request don't have the requested timeout
     - Added the 0.5 timeout
 
-- The domain is cosider to be the second-level-domain + top-level-domain
+- The domain is takint into account subdomain
     - Added the part that removes the port from the URL and only considers the
       second-level-domain + top-level-domain
 
@@ -106,9 +105,9 @@ Problems identified
 Current problems
 ================
 
-- `max_workers` in `ThreadPoolExecutor` has an actual real limit
+- :code:`max_workers` in :code:`ThreadPoolExecutor` has an actual real limit
     - Though there is no maximum number of worker threads in the ThreadPoolExecutor,
       the system will have an upper limit of the number of threads that can be created
       based on how much main memory (RAM) is available.
-- `urls_to_domains` dict can be optimized in memory if we normalize the domains
+- :code:`urls_to_domains` dict can be optimized in memory if we normalize the domains
     - This part I leave as a TODO, since it would increase the readability difficulty
