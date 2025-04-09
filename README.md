@@ -23,7 +23,7 @@ How to run the code
 
 - The code will print in the terminal something similar to:
 
-.. code-block:: 
+.. code-block:: txt
 
     $ python c:/Users/jhino/Documents/sre-interview/main.py C:\Users\jhino\Documents\sre-interview\endpoints.yaml
     Starting the monitoring at Tue Apr  8 17:42:00 2025
