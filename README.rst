@@ -111,7 +111,7 @@ Current problems
 - :code:`urls_to_domains` dict can be optimized in memory if we normalize the domains
     - This part I leave as a TODO, since it would increase the readability difficulty
 - The monitoring is not paralized yet
-    - In case that the monitoring takes more than 15 seconds, the waiting time will be 0
+    - In case that the monitoring (doing healt checks to all URLs) takes more than 15 seconds, the waiting time will be 0
       and the monitoring and printing won't happen every 15 seconds
     - I didn't implement this part, since it is not specified how it should handle the overlap between
       iterations
