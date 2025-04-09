@@ -22,39 +22,38 @@ How to run the code
     $ python <python_file_path> <yaml_file_path>
 
 - The code will print in the terminal something similar to:
+    - ::
 
-.. code-block:: txt
-
-    $ python c:/Users/jhino/Documents/sre-interview/main.py C:\Users\jhino\Documents\sre-interview\endpoints.yaml
-    Starting the monitoring at Tue Apr  8 17:42:00 2025
-
-    Iteration: 1
-    Monitor endpoints Local Time: 2025-04-08T17:42:00.855524
-    Print avail table Local Time: 2025-04-08T17:42:15.855460
-
-    Domain           | Availability
-    -----------------|-------------
-    facebook.com     |         100%
-    fetchrewards.com |          25%
-    google.com       |         100%
-    nopage.com       |           0%
-    typicode.com     |         100%
-
-    ---
-
-    Iteration: 2
-    Monitor endpoints Local Time: 2025-04-08T17:42:15.856469
-    Print avail table Local Time: 2025-04-08T17:42:30.855621
-
-    Domain           | Availability
-    -----------------|-------------
-    facebook.com     |         100%
-    fetchrewards.com |          25%
-    google.com       |         100%
-    nopage.com       |           0%
-    typicode.com     |         100%
-
-    ---
+        $ python c:/Users/jhino/Documents/sre-interview/main.py C:\Users\jhino\Documents\sre-interview\endpoints.yaml
+        Starting the monitoring at Tue Apr  8 17:42:00 2025
+    
+        Iteration: 1
+        Monitor endpoints Local Time: 2025-04-08T17:42:00.855524
+        Print avail table Local Time: 2025-04-08T17:42:15.855460
+    
+        Domain           | Availability
+        -----------------|-------------
+        facebook.com     |         100%
+        fetchrewards.com |          25%
+        google.com       |         100%
+        nopage.com       |           0%
+        typicode.com     |         100%
+    
+        ---
+    
+        Iteration: 2
+        Monitor endpoints Local Time: 2025-04-08T17:42:15.856469
+        Print avail table Local Time: 2025-04-08T17:42:30.855621
+    
+        Domain           | Availability
+        -----------------|-------------
+        facebook.com     |         100%
+        fetchrewards.com |          25%
+        google.com       |         100%
+        nopage.com       |           0%
+        typicode.com     |         100%
+    
+        ---
 
 - The program will also write csv-log-report with the name format as `logs_YYYY-MM-DD_HH-MM-SS.csv`
     - ::
