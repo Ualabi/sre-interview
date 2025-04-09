@@ -13,8 +13,7 @@ How to install the code
 
 How to run the code
 ===================
-
-- Run in the terminal the following code
+- Run in the terminal the following code (note: the endpoints.yaml must be in the same folder where the main.py is):
     - ::
 
         $ cd <directory>
