@@ -88,6 +88,7 @@ Problems identified
 
 - We are priting the dashboard every 15 seconds + time of checking urls
     - Now we calculate the time to sleep to be exactly what we are missing to be 15 seconds
+    - Parallelized the healthchecks using :code:`ThreadPoolExecutor`
     - Given that we can consider that each print-table and csv-append happen in constant time,
       the monitoring is also happening exactly every 15 seconds
     - ::
