@@ -1,5 +1,3 @@
-# jhinojoza: Moved sys to the top part of the file where all imports are done
-#            and added the enum class
 import datetime
 import csv
 import requests
